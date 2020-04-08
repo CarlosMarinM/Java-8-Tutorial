@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{email-layout}">
+<meta charset="UTF-8">
+
+<section layout:fragment="content">
+
+    <font face="'Source Sans Pro', sans-serif" color="#1a1a1a"
+          style="font-size: 22px; font-weight: 300">
+        <span>La resolución número </span>
+
+        <span style="letter-spacing: -1.5px; font-weight: 500"
+              th:text="${resolutionNumber}">123456</span>
+
+        <span> se encuentra cerca de su vencimiento por el motivo :</span>
+
+        <br/><br/>
+        <span style="letter-spacing: -1.5px; font-weight: 500"
+              th:text="${reason}"> finaliza el tiempo</span>
+        <br/>
+        <span style="letter-spacing: -1.5px; font-weight: 500"
+              th:text="${moreInfo}"> mas detalle</span>
+    </font>
+
+</section>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{email-layout}">
+<meta charset="UTF-8">
+
+<section layout:fragment="content">
+
+
+	<font face="'Source Sans Pro', sans-serif" color="#1a1a1a"
+		style="font-size: 22px; font-weight: 300"> 
+	<span>Se ha procesado el archivo</span> 
+			
+	<span style="letter-spacing: -1.5px; font-weight: 500"
+		th:text="${fileName}">UCVE1199.PFT</span>
+		
+	<br/><br/>
+	<div>A continuación encontrará el resultado de su procesamiento:</div>
+	<br/>
+	</font>
+
+	<!--	<span th:each="${}">RESULTADO DE PROCESAMIENTO</span>-->
+	
+</section>
+
+</html>
