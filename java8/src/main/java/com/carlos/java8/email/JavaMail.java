@@ -19,8 +19,8 @@ public class JavaMail {
 
 	final String username = "carlosartmen88@gmail.com";
 	final String password = "imhotep1188";
-//	final String recipient = "carlos.marinm@hotmail.com";
-	final String recipient = "carlosm_tec@jaimetorres.net";
+	final String recipient = "carlos.marinm@hotmail.com";
+//	final String recipient = "carlosm_tec@jaimetorres.net";
 	Properties props = new Properties();
 
 	// Para enviar correos desde el servidor de Gmail, de debe permitir el acceso de

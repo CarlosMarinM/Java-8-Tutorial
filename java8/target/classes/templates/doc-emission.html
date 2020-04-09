@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<html 
-	xmlns:th="http://www.thymeleaf.org" 
-  	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
-  	layout:decorate="~{email-layout}">
-	<meta charset="UTF-8">  	
-  	
-  	<section layout:fragment="content" >
-  			<font face="'Source Sans Pro', sans-serif" color="#1a1a1a" style="font-size: 22px; font-weight: 300">                           
-	                              <span>Se ha emitido el documento:</span>
-	                              <span style="letter-spacing: -1.5px; font-weight: 500" th:text="${documentId}" >FV – 00249579</span>
-	                           </font>
-	                           
-	                           <div style="height: 20px;">&nbsp;</div>
-	                           
-	                           <font face="'Source Sans Pro', sans-serif" color="#1a1a1a" style="font-size: 22px; font-weight: 300">
-	                              <span>Adjunto al correo se encuentran los siguientes archivos:</span>
-	                              <ul>
-	                              <li>Representación gráfica del documento (PDF)</li>
-	                              <li>Documento electrónico en formato XML</li>
-	                              <li>Anexos (información adicional)</li>
-	                              </ul>
-	                           </font>
-  	</section>
-  	
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{email-layout}">
+<meta charset="UTF-8">
+
+<section layout:fragment="content">
+	<font face="'Source Sans Pro', sans-serif" color="#1a1a1a" style="font-size: 15px; font-weight: 300"> 
+		<p>
+			<span>Se ha	emitido el documento:</span> 
+			<span th:text="${documentId}">FV – 00249579</span>		
+		</p>
+		<p>
+			<span>Adjunto al correo se encuentran los siguientes archivos:</span>
+			<ul>
+				<li>Representación gráfica del documento (PDF).</li>
+				<li>Documento electrónico en formato XML.</li>
+				<li>Anexos (información adicional).</li>
+			</ul>		
+		</p>
+	</font>
+</section>
+
 </html>
