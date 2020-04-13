@@ -23,6 +23,7 @@ public class JavaMailSpring {
 	// aplicaciones poco seguras, desde la cuenta de Gmail.
 	// https://myaccount.google.com/lesssecureapps
 	public void enviarCorreo(String subject, String messageBody) throws MessagingException {
+		// Se puede reemplazar el bean por una instancia local de JavaMailSender
 		JavaMailSender emailSender = (JavaMailSenderImpl) ctxSpring.getBean("getJavaMailSender");
 
 		MimeMessage message = emailSender.createMimeMessage();
