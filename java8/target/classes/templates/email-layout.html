@@ -2,7 +2,6 @@
 <html xmlns:th="http://www.thymeleaf.org"   
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
    <title>Faceldi</title>
 
@@ -58,7 +57,7 @@
                            <div style="height: 39px;">&nbsp;</div>
                            <div style="display: block; max-width: 200px;">
                               <a href="https://habilitacion.faceldi.net/fe">
-                                 <img th:src="${'cid:LOGO_FACELDI'}" src="../assets/logo_faceldi.png" alt="img" width="200" style="display: block; width: 200px;"/>
+                                 <img th:src="${'cid:logo_faceldi.png'}" src="../assets/logo_faceldi.png" alt="img" width="200" style="display: block; width: 200px;"/>
                               </a>
                            </div>
                            <div style="height: 13px;">&nbsp;</div>
@@ -72,8 +71,8 @@
                         <td align="left" valign="top">
                            <font face="'Source Sans Pro', sans-serif" color="#1a1a1a" style="font-size: 15px; font-weight: 300;">
                               <p style="margin-bottom: 30px; margin-top: 30px;">
-                                 <span>Estimado (a)</span>
-                                 <span th:text="${nombreEmisor}">DESTINATARIO</span>
+                                 <span>Estimado(a)</span>
+                                 <span th:text="${recipient}">DESTINATARIO</span>
                               </p>
                            </font>
                            
@@ -103,7 +102,7 @@
                                     <td align="center" valign="top">
                                        <div style="display: block;">
                                           <a href="https://www.jaimetorres.net/">
-                                             <img th:src="${'cid:LOGO_JTC'}" src="../assets/logo_jtc.png" alt="img" border="0" style="display: block; max-width: 100%;" />
+                                             <img th:src="${'cid:logo_jtc.png'}" src="../assets/logo_jtc.png" alt="img" border="0" style="display: block; max-width: 100%;" />
                                           </a>
                                        </div>
                                     </td>
@@ -161,19 +160,19 @@
                                        <tr align="center" valign="top">
                                           <td>
                                              <a style="display: block; max-width: 25px;">
-                                                <img th:src="${'cid:SOC_INSTAGRAM'}" src="../assets/SOC_INSTAGRAM.png" alt="img" width="25" style="width: 25px;" />
+                                                <img th:src="${'cid:icon_instagram.png'}" src="../assets/icon_instagram.png" alt="img" width="25" style="width: 25px;" />
                                              </a>
                                           </td>
                                           <td width="45" style="width: 45px; max-width: 45px; min-width: 45px;">&nbsp;</td>
                                           <td>
                                              <a style="display: block; max-width: 25px;">
-                                                <img th:src="${'cid:SOC_FACEBOOK'}" src="../assets/SOC_FACEBOOK.png" alt="img" width="25" style="width: 25px;" />
+                                                <img th:src="${'cid:icon_facebook.png'}" src="../assets/icon_facebook.png" alt="img" width="25" style="width: 25px;" />
                                              </a>
                                           </td>
                                           <td width="45" style="width: 45px; max-width: 45px; min-width: 45px;">&nbsp;</td>
                                           <td>
                                              <a style="display: block; max-width: 25px;">
-                                                <img th:src="${'cid:SOC_TWITTER'}" src="../assets/SOC_TWITTER.png" alt="img" width="25" style="width: 25px;" />
+                                                <img th:src="${'cid:icon_twitter.png'}" src="../assets/icon_twitter.png" alt="img" width="25" style="width: 25px;" />
                                              </a>
                                           </td>
                                           

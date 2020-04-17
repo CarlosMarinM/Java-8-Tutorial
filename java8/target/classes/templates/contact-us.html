@@ -7,13 +7,10 @@
   	
   	<section layout:fragment="content" >
   			<font face="'Source Sans Pro', sans-serif" color="#1a1a1a" style="font-size: 22px; font-weight: 300">
-  				<div>La siguiente persona está interesada en Facturación Electrónica:</div>
-				<br/>				
-				<div style="letter-spacing: -1.5px; font-weight: 500" th:text="${contactName}" >QUINITO MENDEZ</div>
-				<a  th:href="${'mailto:'+contactEmail}" th:text="${contactEmail}" href="mailto:name@email.com">name@email.com</a>				
-				<br/>
-				<div th:text="${contactMessage}">Solicitud de Información Sobre Facturación Electrónica</div>
-				<br/>								
+  				<p>La siguiente persona está interesada en Facturación Electrónica:</p>
+				<p style="letter-spacing: -1.5px; font-weight: 500" th:text="${contactName}" >QUINITO MENDEZ</p>
+				<a th:href="${'mailto:'+contactEmail}" th:text="${contactEmail}" href="mailto:name@email.com">name@email.com</a>				
+				<p th:text="${contactMessage}">Solicitud de Información Sobre Facturación Electrónica</p>
 			</font>
   	</section>  	
 </html>

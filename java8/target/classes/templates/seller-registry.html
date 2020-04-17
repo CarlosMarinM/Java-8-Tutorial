@@ -2,20 +2,13 @@
 <html 
 	xmlns:th="http://www.thymeleaf.org" 
   	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
-  	layout:decorate="~{email-layout}">
+  	layout:decorate="~{user-registry}">
 	<meta charset="UTF-8">  	
   	
-  	<section layout:fragment="content" >
+  	<section layout:fragment="content-user" >
 		<font face="'Source Sans Pro', sans-serif" color="#1a1a1a" style="font-size: 15px; font-weight: 300">                           
 			<p>¡Gracias por elegirnos como su proveedor tecnológico de facturación electrónica!</p>
-			<p>Ha sido registrado como emisor de factura electrónica, se ha creado un usuario para usted en nuestro sistema lo cuál le permitirá consultar, cargar, generar, aceptar ó rechazar documentos.</p>
-			<p>Por favor haga clic en el botón para finalizar el proceso de registro.</p>
-			<div style="text-align: center; margin: 4px 2px;">
-				<a href="https://habilitacion.faceldi.net/fe" role="button" style="background-color: #00aeef; color: white; border: 2px solid #005994; padding: 15px 25px; 
-					text-align: center; text-decoration: none; display: inline-block; font-size: 13px; cursor: pointer; font-style: italic; font-weight: bold; border-radius: 6px;">
-					ACTIVAR USUARIO
-				</a>
-			</div>
+			<p>Ha sido registrado como emisor de factura electrónica.</p>
 		</font>
   	</section>  	
 </html>

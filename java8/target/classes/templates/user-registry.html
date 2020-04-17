@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html 
+	xmlns:th="http://www.thymeleaf.org" 
+  	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+  	layout:decorate="~{email-layout}">
+	<meta charset="UTF-8">  	
+  	
+  	<section layout:fragment="content" >
+		<font face="'Source Sans Pro', sans-serif" color="#1a1a1a" style="font-size: 15px; font-weight: 300">                           
+            <section layout:fragment="content-user">
+            </section>
+            
+			<p>Se ha creado un usuario para usted en nuestro sistema lo cuál le permitirá consultar, cargar, generar, aceptar ó rechazar documentos.</p>
+			<ul>
+				<li>
+					<strong>Usuario: </strong><span th:text="${usuario.usuario}"/>
+				</li>
+				<li th:if="${emisor != null}">
+					<strong>Tipo Documento: </strong> <span th:text="${emisor.tipoDocumento.id}"/>
+				</li>
+				<li th:if="${emisor != null}">
+					<strong>Numero Documento: </strong> <span th:text="${emisor.numeroDocumento}"/>
+				</li>
+				<li>
+					<strong>Contraseña: </strong> <span th:text="${usuario.nuevo_password}"/>
+				</li>
+				<li>
+					<strong>Perfil: </strong> <span th:text="${perfil}"/>
+				</li>
+				<li>
+					<strong>PIN: </strong> <span th:text="${usuario.codigoActivacion}"/>
+				</li>
+			</ul>
+			<p>Por favor haga clic en el botón para finalizar el proceso de registro.</p>
+			<div style="text-align: center; margin: 2px 4px 8px;">
+				<form th:action="${url}" method="POST">
+					<input type="submit" value="ACTIVAR USUARIO" style="background-color: #00aeef; color: white; border: 2px solid #005994; padding: 15px 25px; 
+						text-align: center; text-decoration: none; display: inline-block; font-size: 13px; cursor: pointer; font-style: italic; font-weight: bold; border-radius: 6px;"/>
+				</form>
+			</div>
+			<p>Por seguridad, recuerde cambiar la contraseña asignada al momento de ingresar por primera vez.</p>
+		</font>
+  	</section>  	
+</html>
