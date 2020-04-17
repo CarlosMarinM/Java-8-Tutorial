@@ -5,19 +5,52 @@
 <meta charset="UTF-8">
 
 <section layout:fragment="content">
-	<font face="'Source Sans Pro', sans-serif" color="#1a1a1a" style="font-size: 15px; font-weight: 300"> 
-		<p>
-			<span>Se ha	emitido el documento:</span> 
-			<span th:text="${documentId}">FV – 00249579</span>		
-		</p>
-		<p>
-			<span>Adjunto al correo se encuentran los siguientes archivos:</span>
-			<ul>
-				<li>Representación gráfica del documento (PDF).</li>
-				<li>Documento electrónico en formato XML.</li>
-				<li>Anexos (información adicional).</li>
-			</ul>		
-		</p>
+	<font face="'Source Sans Pro', sans-serif" color="#1a1a1a" style="font-size: 15px; font-weight: 300; text-align: justify;"> 
+		<div th:if="${recipient.equals(documento.emisor.tercero)}">
+			<p>
+				<span>Se ha	emitido el documento</span> 
+				<span th:text="${documento.numeroDocumento + '.'}">FV – 00249579</span>		
+			</p>
+		</div>
+		<div th:if="${recipient.equals(documento.adquiriente.tercero)}">
+			<p>
+				<span>Adjunto al correo se encuentran los siguientes archivos:</span>
+				<ul>
+					<li>Representación gráfica del documento (PDF).</li>
+					<li>Documento electrónico en formato XML.</li>
+					<li th:if="${documento.archivoAdjunto != null}">Anexos (información adicional).</li>
+				</ul>		
+			</p>
+			<p>
+				Podrá aceptar o rechazar este documento dando clic en el siguiente botón.
+			</p>
+			<div style="text-align: center; margin: 2px 4px 8px;">
+				<form th:action="${link_aceptacion}" method="POST">
+					<input type="submit" value="VER DOCUMENTO" style="background-color: #00aeef; color: white; border: 2px solid #005994; padding: 15px 25px; 
+						text-align: center; text-decoration: none; display: inline-block; font-size: 13px; cursor: pointer; font-style: italic; font-weight: bold; border-radius: 6px;"/>
+				</form>
+			</div>
+			<div th:if="${documento.archivoAdjunto != null}">
+				<p>Adicionalmente, se han cargado archivos adjuntos a este documento, que puede descargar dando clic en la siguiente imagen.</p>
+				<div style="text-align: center; margin: 2px 4px 8px;">
+					<form th:action="${link_adjunto}" method="POST">
+						<input type="image" th:src="${'cid:icon_download.png'}" width="80" alt="img"/>
+					</form>
+				</div>
+			</div>
+			<p>
+				<span>Cualquier inquietud será atendida por</span> 
+				<span th:text="${documento.emisor.tercero}"/>
+				<span>al correo</span> 
+				<span th:text="${documento.emisor.sucursal.correo_electronico}"/>
+			</p>
+			<p style="font-size: 12px">
+				Tenga en cuenta: <i>&quot;Ley 1676/13 Artículo 86. La factura se considera irrevocablemente aceptada por el comprador o beneficiario del servicio, si no reclamare en contra de su contenido, bien sea mediante devolución de la misma y de los documentos de despacho, según el caso, o bien mediante reclamo escrito dirigido al emisor o tenedor del título, dentro de los tres (3) días hábiles siguientes a su recepción&quot;.</i>
+			</p>
+			<p style="font-size: 12px">
+				En caso de que el archivo esté cifrado, la contraseña que deberá ingresar será su número de identificación sin dígito de verificación. 
+			</p>
+		</div>
 	</font>
 </section>
 

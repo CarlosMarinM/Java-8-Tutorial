@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html 
+	xmlns:th="http://www.thymeleaf.org" 
+  	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+  	layout:decorate="~{email-layout}">
+	<meta charset="UTF-8">  	
+  	
+  	<section layout:fragment="content" >
+		<font face="'Source Sans Pro', sans-serif" color="#1a1a1a" style="font-size: 15px; font-weight: 300">                           
+			<p>
+				<span th:text="${'La ' + documento.tipoDocumento + ' con número ' + documento.numeroDocumento + 
+ 					' emitida por ' + documento.emisor.tercero + ', el día ' + 
+ 					#dates.format(documento.fecha_hora_emision, 'dd/MM/yyyy') + ' a las ' + 
+ 					#dates.format(documento.fecha_hora_emision, 'HH:mm') + ', se ha'}"></span>
+				<span th:text="${actualizacion}" style="font-weight: bold"></span>
+			</p>
+			<div th:if="${!observacion.isEmpty()}">
+				<p>
+					<span>Observaciones:</span>
+					<span th:text="${observacion}" style="font-style: italic"></span>
+				</p>
+			</div>
+		</font>
+  	</section>  	
+</html>

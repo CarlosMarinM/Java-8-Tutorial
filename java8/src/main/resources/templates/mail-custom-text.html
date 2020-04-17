@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{email-layout}">
+<meta charset="UTF-8">
+
+<section layout:fragment="content">
+
+      <font face="'Source Sans Pro', sans-serif" color="#1a1a1a" style="font-size: 15px; font-weight: 300; text-align: justify;">
+            <p>
+                  <span th:text="${cuerpoCorreo}"></span>
+            </p>
+      </font>
+
+</section>
+
+</html>

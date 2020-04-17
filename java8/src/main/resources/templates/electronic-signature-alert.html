@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html 
+	xmlns:th="http://www.thymeleaf.org" 
+  	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+  	layout:decorate="~{email-layout}">
+	<meta charset="UTF-8">  	
+  	
+  	<section layout:fragment="content" >
+		<font face="'Source Sans Pro', sans-serif" color="#1a1a1a" style="font-size: 15px; font-weight: 300">                           
+			<p>
+				<span>La firma electrónica registrada en nuestro sistema para el proceso de emisión de facturación electrónica debe ser actualizada.</span>
+			</p>
+			<p>
+				<span>Fecha de vencimiento:</span>
+				<span th:text="${#dates.format(emisor.vencimientoFirma, 'dd/MM/yyyy')}"></span>
+			</p>
+		</font>
+  	</section>  	
+</html>

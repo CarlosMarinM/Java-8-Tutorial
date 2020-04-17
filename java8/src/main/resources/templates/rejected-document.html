@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html 
+	xmlns:th="http://www.thymeleaf.org" 
+  	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+  	layout:decorate="~{email-layout}">
+	<meta charset="UTF-8">  	
+  	
+  	<section layout:fragment="content" >
+		<font face="'Source Sans Pro', sans-serif" color="#1a1a1a" style="font-size: 15px; font-weight: 300">                           
+			<p>
+				<span>Ha sido generada una nueva solicitud de</span>
+				<span th:text="${actualizacion}" style="font-weight: bold;"></span>
+				<span>para el documento</span>
+				<span th:text="${solicitud.numeroDocumento + ','}"></span>
+				<span>con fecha de emisión</span>
+				<span th:text="${#dates.format(solicitud.fecha_hora_emision, 'dd/MM/yyyy') + ','}"></span>
+				<span>emitido por</span>
+				<span th:text="${solicitud.emisor.tercero}"></span>
+				<span>y adquirido por</span>
+				<span th:text="${solicitud.adquiriente.tercero + '.'}"></span>
+			</p>
+			<p>
+				<span>Motivo:</span>
+				<span th:text="${solicitud.estadoAnulacion}"></span>
+			</p>
+			<p>
+				<span>Detalle:</span>
+				<span th:text="${solicitud.nota}"></span>
+			</p>
+		</font>
+  	</section>  	
+</html>

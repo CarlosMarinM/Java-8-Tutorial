@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{email-layout}">
+<meta charset="UTF-8">
+
+<section layout:fragment="content">
+	<font face="'Source Sans Pro', sans-serif" color="#1a1a1a" style="font-size: 15px; font-weight: 300"> 
+		<p>
+			<span>Se envía el documento</span> 
+			<span th:text="${documento.numeroDocumento}"></span>
+			<span>a solicitud del cliente.</span>		
+		</p>
+		<p>
+			<span>Cualquier inquietud será atendida por</span> 
+			<span th:text="${documento.emisor.tercero}"/>
+			<span>al correo</span> 
+			<span th:text="${documento.emisor.sucursal.correo_electronico}"/>
+		</p>
+		<p style="font-size: 12px">
+			En caso de que el archivo esté cifrado la contraseña que deberá ingresar será su número de identificación sin dígito de verificación. 
+		</p>
+	</font>
+</section>
+
+</html>

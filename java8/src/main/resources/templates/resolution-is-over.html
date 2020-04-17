@@ -8,15 +8,16 @@
 
       <font face="'Source Sans Pro', sans-serif" color="#1a1a1a" style="font-size: 15px; font-weight: 300">
             <p>
-                  <span>La resolución número </span>
-                  <span th:text="${resolutionNumber}">123456</span>
-                  <span> se encuentra cerca de su vencimiento por el motivo :</span>
+                 <span>La resolución número</span>
+                 <span th:text="${numeroResolucion}">123456</span>
+                 <span>se encuentra cerca de su vencimiento.</span>
             </p>
             <p>
-                  <span th:text="${reason}"> finaliza el tiempo</span>
+            	<span>Motivo:</span>
+                 <span th:text="${razon}"> finaliza el tiempo</span>
             </p>
             <p>
-                  <span th:text="${moreInfo}"> mas detalle</span>
+                 <span th:text="${observacion}"> mas detalle</span>
             </p>
       </font>
 
