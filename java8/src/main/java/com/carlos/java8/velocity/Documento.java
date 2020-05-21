@@ -4,7 +4,7 @@ public class Documento {
 	private String numeroDocumento;
 	private String descripcionEstado;
 	private String estadoDian;
-	private String descripcionEstadoDian;
+	private String descripcionEstadoDIAN;
 	private String respuestaDian;
 
 	public Documento(String numeroDocumento, String descripcionEstado, String estadoDian, String descripcionEstadoDian,
@@ -13,7 +13,7 @@ public class Documento {
 		this.numeroDocumento = numeroDocumento;
 		this.descripcionEstado = descripcionEstado;
 		this.estadoDian = estadoDian;
-		this.descripcionEstadoDian = descripcionEstadoDian;
+		this.descripcionEstadoDIAN = descripcionEstadoDian;
 		this.respuestaDian = respuestaDian;
 	}
 
@@ -41,12 +41,12 @@ public class Documento {
 		this.estadoDian = estadoDian;
 	}
 
-	public String getDescripcionEstadoDian() {
-		return descripcionEstadoDian;
+	public String getDescripcionEstadoDIAN() {
+		return descripcionEstadoDIAN;
 	}
 
-	public void setDescripcionEstadoDian(String descripcionEstadoDian) {
-		this.descripcionEstadoDian = descripcionEstadoDian;
+	public void setDescripcionEstadoDIAN(String descripcionEstadoDian) {
+		this.descripcionEstadoDIAN = descripcionEstadoDian;
 	}
 
 	public String getRespuestaDian() {

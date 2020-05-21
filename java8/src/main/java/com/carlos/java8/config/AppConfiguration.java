@@ -3,31 +3,24 @@ package com.carlos.java8.config;
 import java.nio.charset.StandardCharsets;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 
-import com.carlos.java8.email.JavaMail;
-import com.carlos.java8.email.JavaMailSpring;
-
 import nz.net.ultraq.thymeleaf.LayoutDialect;
 
 @Configuration
-//@ComponentScan(basePackages = { "com.carlos.java8" })
+@ComponentScan(basePackages = { "com.carlos.java8" })
 public class AppConfiguration {
 
-	@Bean(name = "email")
-	public JavaMail email() {
-		return new JavaMail();
-	}
+//	@Bean
+//	public ThymeleafExample thymeleafExample() {
+//		return new ThymeleafExample();
+//	}
 
-	@Bean(name = "emailSpring")
-	public JavaMailSpring emailSpring() {
-		return new JavaMailSpring();
-	}
-
-	@Bean(name = "springTemplateEngine")
+	@Bean
 	public SpringTemplateEngine springTemplateEngine() {
 		SpringTemplateEngine templateEngine = new SpringTemplateEngine();
 		templateEngine.addTemplateResolver(htmlTemplateResolver());
